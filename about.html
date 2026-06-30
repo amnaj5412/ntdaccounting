@@ -1,270 +1,185 @@
-:root{
-  --navy:#0B3D66;
-  --blue:#1E73C7;
-  --sky:#3FA0E8;
-  --pale:#EAF4FC;
-  --gold:#E0A640;
-  --ink:#16263A;
-  --slate:#5A7184;
-  --white:#FFFFFF;
-  --line:#D7E7F6;
-  --maxw:1140px;
-}
-*{box-sizing:border-box;}
-html{scroll-behavior:smooth;}
-body{
-  margin:0;
-  font-family:'Sarabun',sans-serif;
-  color:var(--ink);
-  background:var(--white);
-  line-height:1.75;
-  -webkit-font-smoothing:antialiased;
-}
-h1,h2,h3,h4{font-family:'Kanit',sans-serif;margin:0;color:var(--navy);}
-a{text-decoration:none;color:inherit;}
-img{max-width:100%;display:block;}
-.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
-.eyebrow{
-  display:inline-flex;align-items:center;gap:8px;
-  font-family:'Kanit',sans-serif;font-weight:600;font-size:13px;
-  letter-spacing:.12em;color:var(--blue);text-transform:uppercase;
-  margin-bottom:14px;
-}
-.eyebrow::before{content:"";width:18px;height:2px;background:var(--gold);display:inline-block;}
-.btn{
-  display:inline-flex;align-items:center;gap:8px;
-  font-family:'Kanit',sans-serif;font-weight:600;font-size:15px;
-  padding:13px 28px;border-radius:6px;
-  transition:transform .2s ease, box-shadow .2s ease, background .2s ease;
-  border:1.5px solid transparent;
-}
-.btn-primary{background:var(--navy);color:#fff;box-shadow:0 8px 20px -8px rgba(11,61,102,.55);}
-.btn-primary:hover{background:var(--blue);transform:translateY(-2px);}
-.btn-ghost{border-color:var(--navy);color:var(--navy);}
-.btn-ghost:hover{background:var(--navy);color:#fff;transform:translateY(-2px);}
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>เกี่ยวกับเรา | หจก.ณัฏฐธิดา การบัญชี</title>
+<meta name="description" content="พันธกิจ ค่านิยม และทีมงานของ หจก.ณัฏฐธิดา การบัญชี">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;700;800&family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a href="index.html" class="brand">
+      <img src="assets/img/logo-icon.png" alt="NATTHATHIDA ACCOUNTING โลโก้" class="brand-logo">
+      <div class="brand-text">
+        <strong>ณัฏฐธิดา การบัญชี</strong>
+        <span>NATTHATHIDA ACCOUNTING</span>
+      </div>
+    </a>
+    <nav class="links">
+      <a href="index.html">หน้าหลัก</a>
+      <a href="services.html">บริการของเรา</a>
+      <a href="about.html" class="active">เกี่ยวกับเรา</a>
+      <a href="activities.html">กิจกรรม</a>
+      <a href="articles.html">บทความ</a>
+      <a href="contact.html">ติดต่อเรา</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="tel:+66874902235" class="btn btn-ghost" style="padding:10px 20px;font-size:14px;">โทร 087-490-2235</a>
+      <button class="hamburger" id="hamburger" aria-label="เมนู">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+<section class="page-banner">
+  <div class="ledger-bg"></div>
+  <div class="wrap banner-grid">
+    <div>
+      <div class="breadcrumb"><a href="index.html">หน้าหลัก</a> / เกี่ยวกับเรา</div>
+      <h1>เกี่ยวกับเรา</h1>
+      <p>หจก.ณัฏฐธิดา การบัญชี ก่อตั้งขึ้นด้วยความตั้งใจที่จะเป็นพันธมิตรทางบัญชีที่ธุรกิจ SME ในจังหวัดหนองบัวลำภูและทั่วประเทศวางใจได้</p>
+    </div>
+    <div class="banner-photo">
+      <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=900&q=80" alt="ทีมงานของเรา">
+    </div>
+  </div>
+</section>
 
-/* === Header === */
-header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
-.nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0;}
-.brand{display:flex;align-items:center;gap:12px;}
-.brand-mark{
-  width:42px;height:42px;border-radius:9px;
-  background:linear-gradient(135deg,var(--navy),var(--blue));
-  display:flex;align-items:center;justify-content:center;
-  color:#fff;font-family:'Kanit',sans-serif;font-weight:800;font-size:18px;flex-shrink:0;
-}
-.brand-text{line-height:1.25;}
-.brand-text strong{display:block;font-family:'Kanit',sans-serif;font-weight:700;font-size:16px;color:var(--navy);}
-.brand-text span{display:block;font-size:12px;color:var(--slate);letter-spacing:.04em;}
-nav.links{display:flex;gap:34px;font-family:'Kanit',sans-serif;font-size:15px;font-weight:500;color:var(--ink);}
-nav.links a{position:relative;padding:6px 0;}
-nav.links a::after{content:"";position:absolute;left:0;bottom:0;height:2px;width:0;background:var(--gold);transition:width .25s ease;}
-nav.links a:hover::after, nav.links a.active::after{width:100%;}
-nav.links a.active{color:var(--blue);}
-.nav-cta{display:flex;align-items:center;gap:14px;}
-.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px;}
-.hamburger span{width:24px;height:2.5px;background:var(--navy);border-radius:2px;}
+<section>
+  <div class="wrap about-grid">
+    <div class="reveal">
+      <div class="eyebrow">พันธกิจของเรา</div>
+      <h2>มาตรฐาน ความโปร่งใส และความใส่ใจ ในทุกตัวเลข</h2>
+      <p style="margin-top:18px;color:var(--slate);font-size:15.5px;">เรามุ่งมั่นที่จะให้บริการด้านบัญชีที่มีคุณภาพสูง ภายใต้ระบบการทำงานที่ชัดเจน เป็นมาตรฐาน และโปร่งใส โดยยึดมั่นในหลักความรับผิดชอบต่อหน้าที่อย่างเคร่งครัด เพื่อสร้างความเชื่อมั่นให้แก่ลูกค้าในทุกกระบวนการที่เกี่ยวข้องกับการให้บริการทางบัญชี ภาษี และการวางแผนการเงิน</p>
+      <p style="margin-top:14px;color:var(--slate);font-size:15.5px;">เราตระหนักดีว่าการปฏิบัติงานที่มีคุณภาพย่อมส่งผลต่อความสำเร็จของธุรกิจลูกค้าอย่างแท้จริง จึงให้ความสำคัญกับมาตรฐานการบริการที่เป็นธรรม เท่าเทียม และยึดหลักลูกค้าเป็นศูนย์กลาง</p>
+    </div>
+    <div class="reveal">
+      <blockquote>
+        <p>เรามีเป้าหมายสำคัญที่จะส่งมอบงานบัญชีที่ถูกต้อง มีคุณภาพ และสะท้อนภาพทางการเงินที่แท้จริงของลูกค้า เพื่อให้สามารถนำไปใช้วิเคราะห์ วางแผน และตัดสินใจทางธุรกิจได้อย่างแม่นยำ</p>
+        <footer>— หจก.ณัฏฐธิดา การบัญชี</footer>
+      </blockquote>
+    </div>
+  </div>
+</section>
 
-/* === Page header banner (subpages) === */
-.page-banner{
-  background:linear-gradient(180deg,var(--pale) 0%, #fff 100%);
-  padding:54px 0 40px;position:relative;overflow:hidden;
-}
-.page-banner .ledger-bg{
-  position:absolute;inset:0;z-index:0;
-  background-image:repeating-linear-gradient(to bottom, transparent 0, transparent 39px, rgba(30,115,199,.07) 40px);
-  mask-image:linear-gradient(to bottom, transparent, black 15%, black 70%, transparent);
-}
-.breadcrumb{position:relative;z-index:1;font-family:'Kanit',sans-serif;font-size:13px;color:var(--slate);margin-bottom:14px;}
-.breadcrumb a{color:var(--blue);}
-.page-banner h1{position:relative;z-index:1;font-size:clamp(28px,3.6vw,42px);font-weight:800;}
-.page-banner p{position:relative;z-index:1;color:var(--slate);max-width:600px;margin-top:14px;font-size:16px;}
+<section class="bg-pale">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">ค่านิยมองค์กร</div>
+      <h2>สิ่งที่เรายึดถือในการทำงานทุกวัน</h2>
+    </div>
+    <div class="value-grid">
+      <div class="value-card reveal">
+        <h4>ความถูกต้อง</h4>
+        <p>ทุกตัวเลขผ่านการตรวจสอบอย่างละเอียด ก่อนนำส่งหรือยื่นต่อหน่วยงานราชการทุกครั้ง</p>
+      </div>
+      <div class="value-card reveal">
+        <h4>ความตรงเวลา</h4>
+        <p>ยื่นแบบและนำส่งภาษีตามกำหนดเวลาเสมอ เพื่อไม่ให้ลูกค้าต้องเสี่ยงกับค่าปรับ</p>
+      </div>
+      <div class="value-card reveal">
+        <h4>ความโปร่งใส</h4>
+        <p>อธิบายทุกขั้นตอนและตัวเลขให้ลูกค้าเข้าใจง่าย ไม่มีข้อมูลที่ซ่อนหรือคลุมเครือ</p>
+      </div>
+      <div class="value-card reveal">
+        <h4>การพัฒนาอย่างต่อเนื่อง</h4>
+        <p>ติดตามการเปลี่ยนแปลงของกฎหมายภาษีและมาตรฐานบัญชีอยู่เสมอ เพื่อให้คำแนะนำที่ทันสมัย</p>
+      </div>
+      <div class="value-card reveal">
+        <h4>ใส่ใจแบบกันเอง</h4>
+        <p>พร้อมตอบคำถามและให้คำปรึกษาเหมือนเป็นทีมงานบัญชีส่วนตัวของธุรกิจคุณ</p>
+      </div>
+      <div class="value-card reveal">
+        <h4>จรรยาบรรณวิชาชีพ</h4>
+        <p>ปฏิบัติงานภายใต้กรอบกฎหมายและจริยธรรมของวิชาชีพบัญชีอย่างเคร่งครัด</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-/* === Hero (home only) === */
-.hero{position:relative;overflow:hidden;background:linear-gradient(180deg,var(--pale) 0%, #fff 78%);padding:88px 0 70px;}
-.ledger-bg{position:absolute;inset:0;z-index:0;background-image:repeating-linear-gradient(to bottom, transparent 0, transparent 39px, rgba(30,115,199,.07) 40px);mask-image:linear-gradient(to bottom, transparent, black 15%, black 70%, transparent);}
-.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;}
-.hero h1{font-size:clamp(32px,4.2vw,52px);font-weight:800;line-height:1.28;letter-spacing:-.01em;}
-.hero h1 .accent{color:var(--blue);}
-.hero p.lead{margin-top:20px;font-size:17px;color:var(--slate);max-width:520px;}
-.hero-ctas{display:flex;gap:14px;margin-top:34px;flex-wrap:wrap;}
-.hero-stats{display:flex;gap:30px;margin-top:46px;}
-.hero-stats div strong{display:block;font-family:'Kanit',sans-serif;font-size:26px;font-weight:700;color:var(--navy);}
-.hero-stats div span{font-size:13px;color:var(--slate);}
-.hero-visual{position:relative;}
-.ledger-card{background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:0 30px 60px -25px rgba(11,61,102,.35);padding:30px 28px;position:relative;}
-.ledger-card .tag{display:inline-block;background:var(--pale);color:var(--blue);font-family:'Kanit',sans-serif;font-size:12px;font-weight:600;padding:5px 12px;border-radius:20px;margin-bottom:18px;}
-.ledger-row{display:flex;justify-content:space-between;align-items:baseline;padding:11px 0;border-bottom:1px dashed var(--line);font-size:14px;}
-.ledger-row:last-child{border-bottom:none;}
-.ledger-row span:first-child{color:var(--slate);}
-.ledger-row span:last-child{font-family:'Kanit',sans-serif;font-weight:600;color:var(--navy);}
-.ledger-total{margin-top:16px;padding-top:16px;border-top:2px solid var(--navy);display:flex;justify-content:space-between;align-items:baseline;}
-.ledger-total span:first-child{font-family:'Kanit',sans-serif;font-weight:700;color:var(--navy);}
-.ledger-total span:last-child{font-family:'Kanit',sans-serif;font-weight:800;font-size:22px;color:var(--gold);}
-.float-badge{position:absolute;bottom:-20px;right:-18px;background:var(--navy);color:#fff;border-radius:12px;padding:14px 18px;box-shadow:0 14px 30px -10px rgba(11,61,102,.6);font-family:'Kanit',sans-serif;}
-.float-badge strong{display:block;font-size:18px;}
-.float-badge span{font-size:11px;opacity:.8;}
+<section>
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">ทีมงานของเรา</div>
+      <h2>ทีมงานมืออาชีพ พร้อมดูแลธุรกิจคุณ</h2>
+    </div>
+    <div class="team-grid">
+      <div class="team-card reveal">
+        <div class="team-photo">ณธ</div>
+        <h4>คุณณัฏฐธิดา</h4>
+        <span>ผู้ก่อตั้ง / ผู้จัดการสำนักงาน</span>
+      </div>
+      <div class="team-card reveal">
+        <div class="team-photo">บช</div>
+        <h4>ทีมบัญชีรายเดือน</h4>
+        <span>ดูแลบัญชีและภาษีรายเดือน</span>
+      </div>
+      <div class="team-card reveal">
+        <div class="team-photo">CPA</div>
+        <h4>ผู้สอบบัญชีรับอนุญาต</h4>
+        <span>ตรวจสอบและรับรองงบการเงิน</span>
+      </div>
+      <div class="team-card reveal">
+        <div class="team-photo">ลค</div>
+        <h4>ฝ่ายลูกค้าสัมพันธ์</h4>
+        <span>ให้คำปรึกษาและประสานงาน</span>
+      </div>
+    </div>
+  </div>
+</section>
 
-/* === Section generic === */
-section{padding:84px 0;}
-.section-head{max-width:680px;margin-bottom:50px;}
-.section-head h2{font-size:clamp(26px,3vw,36px);font-weight:700;line-height:1.35;margin-top:6px;}
-.section-head p{margin-top:14px;color:var(--slate);font-size:16px;}
-.bg-pale{background:var(--pale);}
+<section class="bg-pale">
+  <div class="wrap">
+    <div class="cta-band reveal">
+      <div>
+        <h3>อยากให้เราดูแลบัญชีธุรกิจคุณ?</h3>
+        <p>ติดต่อทีมงานของเราเพื่อปรึกษาและประเมินบริการที่เหมาะกับธุรกิจคุณได้ฟรี</p>
+      </div>
+      <a href="contact.html" class="btn btn-primary">ติดต่อเรา</a>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="wrap footer-grid">
+    <div class="footer-brand">
+      <strong style="color:#fff;font-family:'Kanit',sans-serif;font-size:18px;">หจก.ณัฏฐธิดา การบัญชี</strong>
+      <p>ให้บริการด้านบัญชี ภาษี และจดทะเบียนธุรกิจอย่างมืออาชีพ ด้วยมาตรฐานที่ชัดเจน โปร่งใส และเชื่อถือได้ สำหรับ SME ในจังหวัดหนองบัวลำภูและทั่วประเทศ</p>
+    </div>
+    <div>
+      <h5>เมนู</h5>
+      <ul>
+        <li><a href="index.html">หน้าหลัก</a></li>
+        <li><a href="services.html">บริการของเรา</a></li>
+        <li><a href="about.html">เกี่ยวกับเรา</a></li>
+        <li><a href="activities.html">กิจกรรม</a></li>
+        <li><a href="articles.html">บทความ</a></li>
+        <li><a href="contact.html">ติดต่อเรา</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>ติดต่อ</h5>
+      <ul>
+        <li><a href="tel:+66874902235">087-490-2235</a></li>
+        <li><a href="mailto:natthathida.pink99@gmail.com">natthathida.pink99@gmail.com</a></li>
+        <li><a href="https://lin.ee/iWMopUL" target="_blank">LINE: ทักไลน์ปรึกษา</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom wrap">
+    © 2026 หจก.ณัฏฐธิดา การบัญชี · สงวนลิขสิทธิ์
+  </div>
+</footer>
 
-/* === Services (cards, home preview) === */
-.service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;}
-.service-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:32px 26px;transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;}
-.service-card:hover{transform:translateY(-6px);box-shadow:0 20px 40px -22px rgba(11,61,102,.4);border-color:var(--sky);}
-.service-icon{width:50px;height:50px;border-radius:12px;background:var(--pale);display:flex;align-items:center;justify-content:center;margin-bottom:18px;color:var(--blue);}
-.service-card h3{font-size:18px;font-weight:600;margin-bottom:10px;}
-.service-card p{font-size:14.5px;color:var(--slate);margin:0;}
-.service-card a.more{display:inline-block;margin-top:14px;font-family:'Kanit',sans-serif;font-size:13px;font-weight:600;color:var(--blue);}
+<a href="https://lin.ee/iWMopUL" target="_blank" class="float-line" aria-label="ทักไลน์">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 5.81 2 10.5c0 4.16 3.4 7.65 8.06 8.37-.18-.55-.47-1.62-.27-2.27.18-.61 1.16-3.93 1.16-3.93s-.3-.6-.3-1.49c0-1.4.81-2.44 1.82-2.44.86 0 1.27.64 1.27 1.41 0 .86-.55 2.14-.83 3.33-.24.99.5 1.8 1.48 1.8 1.78 0 3.15-1.88 3.15-4.58 0-2.39-1.72-4.07-4.18-4.07-2.85 0-4.52 2.12-4.52 4.32 0 .86.33 1.78.74 2.28a.3.3 0 0 1 .07.29c-.08.31-.25 1-.29 1.14-.04.18-.16.22-.36.13-1.36-.63-2.21-2.61-2.21-4.2 0-3.41 2.48-6.55 7.15-6.55 3.75 0 6.67 2.67 6.67 6.24 0 3.71-2.34 6.69-5.58 6.69-1.09 0-2.12-.57-2.47-1.24 0 0-.59 2.24-.73 2.78-.21.79-.78 1.78-1.16 2.38C9.86 21.83 10.91 22 12 22c5.52 0 10-3.81 10-8.5S17.52 2 12 2Z"/></svg>
+  ทักไลน์ปรึกษา
+</a>
 
-/* === Service detail blocks (services.html) === */
-.service-detail{
-  display:grid;grid-template-columns:.85fr 1.15fr;gap:46px;align-items:start;
-  padding:48px 0;border-bottom:1px solid var(--line);
-}
-.service-detail:last-child{border-bottom:none;}
-.service-detail .num{font-family:'Kanit',sans-serif;font-size:14px;font-weight:700;color:var(--gold);letter-spacing:.08em;margin-bottom:10px;display:block;}
-.service-detail h3{font-size:22px;font-weight:700;line-height:1.4;}
-.service-detail .visual{
-  background:var(--pale);border-radius:16px;min-height:160px;
-  display:flex;align-items:center;justify-content:center;color:var(--blue);
-}
-.detail-list{margin:18px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:12px;}
-.detail-list li{display:flex;gap:10px;font-size:15px;color:var(--ink);}
-.detail-list li::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--blue);margin-top:8px;flex-shrink:0;}
-
-/* === About / Mission === */
-.about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:start;}
-.about-list{margin-top:26px;display:flex;flex-direction:column;gap:18px;}
-.about-item{display:flex;gap:14px;align-items:flex-start;}
-.about-item .dot{width:8px;height:8px;border-radius:50%;background:var(--gold);margin-top:9px;flex-shrink:0;}
-.about-item p{margin:0;color:var(--ink);font-size:15px;}
-.about-item strong{color:var(--navy);font-family:'Kanit',sans-serif;}
-blockquote{margin:0;padding:30px 32px;background:var(--navy);color:#fff;border-radius:16px;font-family:'Kanit',sans-serif;font-size:18px;font-weight:400;line-height:1.7;position:relative;}
-blockquote::before{content:"\201C";font-size:60px;color:var(--gold);position:absolute;top:-6px;left:18px;font-family:Georgia,serif;}
-blockquote p{padding-left:26px;}
-blockquote footer{margin-top:18px;padding-left:26px;font-size:13px;color:#9DC0E2;font-family:'Sarabun',sans-serif;}
-
-.value-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:10px;}
-.value-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:28px;}
-.value-card h4{font-size:17px;font-weight:600;margin-bottom:8px;}
-.value-card p{font-size:14.5px;color:var(--slate);margin:0;}
-
-.team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;}
-.team-card{text-align:center;}
-.team-photo{
-  width:100%;aspect-ratio:1;border-radius:14px;background:linear-gradient(135deg,var(--navy),var(--sky));
-  display:flex;align-items:center;justify-content:center;color:#fff;font-family:'Kanit',sans-serif;font-weight:700;font-size:26px;margin-bottom:12px;
-}
-.team-card h4{font-size:15px;font-weight:600;}
-.team-card span{font-size:13px;color:var(--slate);}
-
-/* === Clients strip === */
-.clients-strip{display:flex;justify-content:space-between;flex-wrap:wrap;gap:18px;padding:30px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
-.client-pill{font-family:'Kanit',sans-serif;font-size:13px;color:var(--slate);padding:9px 18px;border:1px solid var(--line);border-radius:30px;}
-
-/* === Articles === */
-.article-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;}
-.article-card{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff;transition:transform .25s ease, box-shadow .25s ease;display:flex;flex-direction:column;}
-.article-card:hover{transform:translateY(-5px);box-shadow:0 18px 36px -20px rgba(11,61,102,.35);}
-.article-thumb{height:130px;background:linear-gradient(135deg,var(--navy),var(--sky));display:flex;align-items:center;justify-content:center;color:#fff;font-family:'Kanit',sans-serif;font-weight:700;font-size:13px;letter-spacing:.05em;text-align:center;padding:0 14px;}
-.article-body{padding:20px;flex:1;display:flex;flex-direction:column;}
-.article-body h4{font-size:15.5px;font-weight:600;line-height:1.5;margin-bottom:10px;}
-.article-body p{font-size:13.5px;color:var(--slate);flex:1;margin:0 0 14px;}
-.article-body a.more{font-family:'Kanit',sans-serif;font-size:13px;font-weight:600;color:var(--blue);}
-.article-meta{font-size:12px;color:var(--slate);margin-bottom:8px;font-family:'Kanit',sans-serif;}
-
-/* article single page */
-.article-single{max-width:760px;margin:0 auto;}
-.article-single .article-thumb{height:280px;border-radius:14px;font-size:16px;margin-bottom:30px;}
-.article-single h1{font-size:clamp(26px,3.4vw,38px);margin-bottom:10px;}
-.article-single .meta{font-family:'Kanit',sans-serif;font-size:13px;color:var(--slate);margin-bottom:28px;}
-.article-single p{font-size:16px;color:var(--ink);margin:0 0 20px;}
-.article-single h2{font-size:21px;margin:34px 0 14px;}
-.article-single ul{padding-left:20px;color:var(--ink);font-size:16px;}
-.article-single ul li{margin-bottom:8px;}
-
-/* === Activities (กิจกรรม) === */
-.activity-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
-.activity-card{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff;}
-.activity-thumb{height:170px;background:linear-gradient(135deg,var(--sky),var(--navy));display:flex;align-items:center;justify-content:center;color:#fff;font-family:'Kanit',sans-serif;font-weight:700;}
-.activity-body{padding:20px;}
-.activity-body .date{font-family:'Kanit',sans-serif;font-size:12px;color:var(--gold);font-weight:600;margin-bottom:6px;}
-.activity-body h4{font-size:16px;font-weight:600;margin-bottom:8px;}
-.activity-body p{font-size:13.5px;color:var(--slate);margin:0;}
-
-/* === CTA band === */
-.cta-band{background:linear-gradient(135deg,var(--navy),var(--blue));border-radius:22px;padding:50px 48px;display:flex;justify-content:space-between;align-items:center;gap:30px;flex-wrap:wrap;color:#fff;}
-.cta-band h3{color:#fff;font-size:24px;font-weight:700;}
-.cta-band p{margin:8px 0 0;color:#CFE3F5;font-size:14.5px;}
-.cta-band .btn-primary{background:var(--gold);box-shadow:none;}
-.cta-band .btn-primary:hover{background:#EFB95C;}
-
-/* === Contact === */
-.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:50px;}
-.contact-item{display:flex;gap:16px;padding:18px 0;border-bottom:1px solid var(--line);}
-.contact-item:last-child{border-bottom:none;}
-.contact-icon{width:42px;height:42px;border-radius:10px;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
-.contact-item h4{font-size:14px;color:var(--slate);font-weight:500;margin-bottom:4px;font-family:'Sarabun',sans-serif;}
-.contact-item p, .contact-item a{font-family:'Kanit',sans-serif;font-weight:600;font-size:15.5px;color:var(--navy);}
-.map-frame{border-radius:16px;overflow:hidden;border:1px solid var(--line);height:100%;min-height:340px;}
-.map-frame iframe{width:100%;height:100%;min-height:340px;border:0;display:block;}
-.contact-form{display:flex;flex-direction:column;gap:16px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:30px;}
-.contact-form label{font-family:'Kanit',sans-serif;font-size:13.5px;font-weight:600;color:var(--navy);margin-bottom:6px;display:block;}
-.contact-form input, .contact-form textarea{
-  width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:8px;font-family:'Sarabun',sans-serif;font-size:14.5px;background:var(--pale);
-}
-.contact-form input:focus, .contact-form textarea:focus{outline:2px solid var(--sky);background:#fff;}
-
-/* === Footer === */
-footer{background:var(--navy);color:#CFE3F5;padding:54px 0 26px;}
-.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;}
-.footer-brand p{font-size:13.5px;color:#9DC0E2;margin-top:14px;max-width:320px;}
-footer h5{color:#fff;font-family:'Kanit',sans-serif;font-size:15px;margin-bottom:16px;}
-footer ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;}
-footer a{font-size:14px;color:#CFE3F5;}
-footer a:hover{color:#fff;}
-.footer-bottom{margin-top:40px;padding-top:20px;border-top:1px solid rgba(255,255,255,.12);font-size:13px;color:#8FB3D6;text-align:center;}
-
-/* === LINE float button === */
-.float-line{
-  position:fixed;bottom:26px;right:26px;z-index:60;background:#06C755;color:#fff;border-radius:50px;
-  display:flex;align-items:center;gap:8px;padding:13px 20px;font-family:'Kanit',sans-serif;font-weight:600;font-size:14px;
-  box-shadow:0 14px 30px -8px rgba(6,199,85,.55);transition:transform .2s ease;
-}
-.float-line:hover{transform:translateY(-3px);}
-
-/* === Reveal animation === */
-.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease, transform .7s ease;}
-.reveal.show{opacity:1;transform:translateY(0);}
-
-@media (max-width:920px){
-  nav.links{display:none;}
-  .hamburger{display:flex;}
-  .hero-grid{grid-template-columns:1fr;}
-  .hero-visual{order:-1;max-width:380px;margin:0 auto;}
-  .about-grid, .contact-grid{grid-template-columns:1fr;}
-  .service-grid{grid-template-columns:repeat(2,1fr);}
-  .article-grid{grid-template-columns:repeat(2,1fr);}
-  .activity-grid{grid-template-columns:repeat(2,1fr);}
-  .value-grid{grid-template-columns:1fr;}
-  .team-grid{grid-template-columns:repeat(2,1fr);}
-  .footer-grid{grid-template-columns:1fr;}
-  .cta-band{flex-direction:column;text-align:center;}
-  .service-detail{grid-template-columns:1fr;}
-  .service-detail .visual{order:-1;min-height:120px;}
-}
-@media (max-width:560px){
-  .service-grid, .article-grid, .activity-grid, .team-grid{grid-template-columns:1fr;}
-  .hero-stats{gap:20px;flex-wrap:wrap;}
-  .cta-band{padding:36px 28px;}
-  section{padding:64px 0;}
-}
-@media (prefers-reduced-motion: reduce){
-  .reveal{opacity:1;transform:none;transition:none;}
-  *{scroll-behavior:auto !important;}
-}
+<script src="assets/main.js"></script>
+</body>
+</html>
